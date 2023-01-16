@@ -12,8 +12,58 @@ import GSharp3 from '../Assets/Audio/G#3.wav';
 import A3 from '../Assets/Audio/A3.wav';
 import ASharp3 from '../Assets/Audio/A#3.wav';
 import B3 from '../Assets/Audio/B3.wav';
-import C4 from '../Assets/Audio/C4.wav';
 
+import C4 from '../Assets/Audio/C4.wav';
+import CSharp4 from '../Assets/Audio/C#4.wav';
+import D4 from '../Assets/Audio/D4.wav';
+import Dsharp4 from '../Assets/Audio/D#4.wav';
+import E4 from '../Assets/Audio/E4.wav';
+import F4 from '../Assets/Audio/F4.wav';
+import FSharp4 from '../Assets/Audio/F#4.wav';
+import G4 from '../Assets/Audio/G4.wav';
+import GSharp4 from '../Assets/Audio/G#4.wav';
+import A4 from '../Assets/Audio/A4.wav';
+import ASharp4 from '../Assets/Audio/A#4.wav';
+import B4 from '../Assets/Audio/B4.wav';
+
+import C5 from '../Assets/Audio/C5.wav';
+
+// Major Scales
+const cMaj = [C3, D3, E3, F3, G3, A3, B3, C4 ]
+
+const cSharpMaj = [CSharp3, DSharp3, F3, FSharp3, GSharp3, ASharp3, C4, CSharp4];
+
+const dMaj = [D3, E3, FSharp3, G3, A3, B3, CSharp4, D4];
+
+const dSharpMaj = [DSharp3, F3, G3, GSharp3, ASharp3, C4, D4, Dsharp4];
+
+const eMaj = [E3, FSharp3, GSharp3, A3, B3, CSharp4, Dsharp4, E4];
+
+const fMaj = [F3, G3, A3, ASharp3, C4, D4, E4, F4];
+
+const fSharpMaj = [FSharp3, GSharp3, ASharp3, B3, CSharp4, Dsharp4, F4, FSharp4];
+
+const gMaj = [G3, A3, B3, C4, D4, E4, FSharp4, G4];
+
+const gSharpMaj = [GSharp3, ASharp3, C4, CSharp4, Dsharp4, F4, G4, GSharp4];
+
+const aMaj = [A3, B4, CSharp4, D4, E4, FSharp4, GSharp4, A4];
+
+const aSharpMaj = [ASharp3, C4, D4, Dsharp4, F4, G4, A4, ASharp4];
+
+const bMaj = [B3, CSharp4, Dsharp4, E4, FSharp4, GSharp4, ASharp4, B4];
+
+// Minor Scales
+
+
+
+
+
+
+
+
+
+const majorScales = [cMaj, cSharpMaj, dMaj, dSharpMaj, eMaj, fMaj, fSharpMaj, gMaj, gSharpMaj, aMaj, aSharpMaj, bMaj];
 
 
 
@@ -22,6 +72,8 @@ import C4 from '../Assets/Audio/C4.wav';
 
 
 const AudioPlayer = () => {
+
+    
   return (
     <div>
         

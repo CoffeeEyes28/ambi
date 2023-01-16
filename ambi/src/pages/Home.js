@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import AudioTest from '../Assets/Audio/Chords/CMaj.wav';
+
 const options = [
 {
     key: 'Please Select Your Key',
@@ -98,6 +100,12 @@ const Home = () => {
         </select>
         <button type="submit" onClick={handleSubmit}>GENERATE</button>
       </form>
+
+      <div>
+        <audio controls fade in loop>
+          <source src={AudioTest}/>
+        </audio>
+      </div>
     </div>
   );
 };
