@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import AudioTest from '../Assets/Audio/Chords/CMaj.wav';
 
 const options = [
 {
@@ -12,7 +11,7 @@ const options = [
     value: "C",
   },
   {
-    key: "C#",
+    key: "C#/Db",
     value: "C#",
   },
   {
@@ -20,7 +19,7 @@ const options = [
     value: "D",
   },
   {
-    key: "D#",
+    key: "D#/Eb",
     value: "D#",
   },
   {
@@ -32,7 +31,7 @@ const options = [
     value: "F",
   },
   {
-    key: "F#",
+    key: "F#/Gb",
     value: "F#",
   },
   {
@@ -40,7 +39,7 @@ const options = [
     value: "G",
   },
   {
-    key: "G#",
+    key: "G#/Ab",
     value: "G#",
   },
   {
@@ -48,7 +47,7 @@ const options = [
     value: "A",
   },
   {
-    key: "A#",
+    key: "A#/Bb",
     value: "A#",
   },
   {
@@ -61,9 +60,10 @@ const Home = () => {
   const [value, setValue] = useState("");
   const [Majmin, setMajmin] = useState("");
   const [choice, setChoice] = useState("");
+  const [view, setView] = useState(false);
 
   const handleChange = (event) => {
-
+    
     setValue(event.target.value);
   };
 
@@ -72,16 +72,34 @@ const Home = () => {
     setMajmin(event.target.value);
   };
 
+  const handleView = () => {
+    if (view === false){
+      setView(true)
+    } else{
+      setView(false)
+    }
+};
+
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    setChoice(value + ' ' + Majmin);
-    
+        if(value.length && Majmin.length !== 0 && value && Majmin !== null){
+
+        setChoice(value + ' ' + Majmin);
+        handleView();
+        } else{
+          console.log("error")
+        }   
   };
 
- console.log(choice)
+ 
+
+
   return (
     <div>
+      <div style={{visibility: view ? 'hidden' : 'visible'}}>
       <h1>ambi</h1>
       <p>
         ambi is your ambient generating friend. Select your desired key and scale, and then press the
@@ -100,12 +118,12 @@ const Home = () => {
         </select>
         <button type="submit" onClick={handleSubmit}>GENERATE</button>
       </form>
-
-      <div>
-        <audio controls fade in loop>
-          <source src={AudioTest}/>
-        </audio>
       </div>
+          <div style={{visibility: view ? 'visible' : 'hidden'}}>
+            <h2>Hello</h2>
+            <button onClick={handleView}>Go Back</button>
+          </div>
+     
     </div>
   );
 };
