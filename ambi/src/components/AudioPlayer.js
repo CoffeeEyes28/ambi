@@ -54,7 +54,29 @@ const aSharpMaj = [ASharp3, C4, D4, Dsharp4, F4, G4, A4, ASharp4];
 const bMaj = [B3, CSharp4, Dsharp4, E4, FSharp4, GSharp4, ASharp4, B4];
 
 // Minor Scales
+const cMin = [C3, D3, DSharp3, F3, G3, GSharp3, ASharp3, C4];
 
+const cSharpMin = [CSharp3, DSharp3, E3, FSharp3, GSharp3, A3, B3, CSharp4];
+
+const dMin = [D3, E3, F3, G3, A3, ASharp3, C4, D4];
+
+const dSharpMin = [DSharp3, F3, FSharp3, GSharp3, ASharp3, B3, CSharp4, Dsharp4];
+
+const eMin = [E3, FSharp3, G3, A3, B3, C4, D4, E4];
+
+const fMin = [F3, G3, GSharp3, ASharp3, C4, CSharp4, Dsharp4, F4];
+
+const fSharpMin = [FSharp3, GSharp3, A3, B3, CSharp4, D4, E4, FSharp4];
+
+const gMin = [G3, A3, ASharp3, C4, D4, Dsharp4, F4, G4];
+
+const gSharpMin = [GSharp3, ASharp3, B3, CSharp4, Dsharp4, E4, FSharp4, GSharp4];
+
+const aMin = [A3, B3, C4, D4, E4, F4, G4, A4];
+
+const aSharpMin = [ASharp3, C4, CSharp4, Dsharp4, F4, FSharp4, GSharp4, ASharp4];
+
+const bMin = [B3, CSharp4, D4, E4, FSharp4, G4, A4, B4];
 
 
 
@@ -65,7 +87,7 @@ const bMaj = [B3, CSharp4, Dsharp4, E4, FSharp4, GSharp4, ASharp4, B4];
 
 const majorScales = [cMaj, cSharpMaj, dMaj, dSharpMaj, eMaj, fMaj, fSharpMaj, gMaj, gSharpMaj, aMaj, aSharpMaj, bMaj];
 
-
+const minorScales = [cMin, cSharpMin, dMin, dSharpMin, eMin, fMin, fSharpMin, gMin, gSharpMin, aMin, aSharpMin, bMin];
 
 
 
