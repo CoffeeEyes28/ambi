@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
+import AudioPlayer from "../components/AudioPlayer";
+
 
 const options = [
 {
     key: 'Please Select Your Key',
-    value: null,
+    value: 'null',
 },
   {
     key: "C",
@@ -85,7 +87,7 @@ const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-        if(value.length && Majmin.length !== 0 && value && Majmin !== null){
+        if(value.length !== 0 && Majmin.length !== 0 && (value !== 'null' && Majmin !== 'null')){
 
         setChoice(value + ' ' + Majmin);
         handleView();
@@ -120,7 +122,8 @@ const Home = () => {
       </form>
       </div>
           <div style={{visibility: view ? 'visible' : 'hidden'}}>
-            <h2>Hello</h2>
+            <h2>Key: {choice}</h2>
+            <AudioPlayer choice={choice}/>
             <button onClick={handleView}>Go Back</button>
           </div>
      

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import C3 from '../Assets/Audio/C3.wav';
 import CSharp3 from '../Assets/Audio/C#3.wav';
@@ -93,12 +93,47 @@ const minorScales = [cMin, cSharpMin, dMin, dSharpMin, eMin, fMin, fSharpMin, gM
 
 
 
-const AudioPlayer = () => {
+const AudioPlayer = (choice) => {
 
+
+const [audioSource, setAudioSource] = useState([])
+
+const [currentNote, setCurrentNote] = useState(0)
+
+const shuffle = (arr) => {
+  let currentIndex = arr.length, t, i;
+
+  while (currentIndex){
+    i = Math.floor(Math.random() * currentIndex--);
+
+    t = arr[currentIndex];
+    arr[currentIndex] = arr[i];
+    arr[i] = t;
+  }
+  return arr;
+}
+
+
+
+useEffect(()=> {
+  switch(choice.choice) {
+    case "C Major": 
+    setAudioSource(shuffle(cMaj));
+    break;
+    case "C# Major": 
+    setAudioSource(shuffle(cSharpMaj));
+    break;
     
+   }
+},[choice]);
+
+
+
+console.log(currentNote)
+
   return (
     <div>
-        
+        <audio controls autoPlay src={audioSource[currentNote]} onEnded={() => setCurrentNote(i => i + 1)}></audio>
         
         
         </div>
