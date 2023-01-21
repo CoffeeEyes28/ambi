@@ -134,6 +134,113 @@ useEffect(()=> {
     setCurrentNote(0);
     break;
 
+    case "D# Major": 
+    setAudioSource(shuffle(dSharpMaj));
+    setCurrentNote(0);
+    break;
+
+    case "E Major": 
+    setAudioSource(shuffle(eMaj));
+    setCurrentNote(0);
+    break;
+
+    case "F Major": 
+    setAudioSource(shuffle(fMaj));
+    setCurrentNote(0);
+    break;
+
+    case "F# Major": 
+    setAudioSource(shuffle(fSharpMaj));
+    setCurrentNote(0);
+    break;
+
+    case "G Major": 
+    setAudioSource(shuffle(gMaj));
+    setCurrentNote(0);
+    break;
+
+    case "G# Major": 
+    setAudioSource(shuffle(gSharpMaj));
+    setCurrentNote(0);
+    break;
+
+    case "A Major": 
+    setAudioSource(shuffle(aMaj));
+    setCurrentNote(0);
+    break;
+
+    case "A# Major": 
+    setAudioSource(shuffle(aSharpMaj));
+    setCurrentNote(0);
+    break;
+
+    case "B Major": 
+    setAudioSource(shuffle(bMaj));
+    setCurrentNote(0);
+    break;
+
+    case "C minor": 
+    setAudioSource(shuffle(cMin));
+    setCurrentNote(0);
+    break;
+
+    case "C# minor": 
+    setAudioSource(shuffle(cSharpMin));
+    setCurrentNote(0);
+    break;
+
+    case "D minor": 
+    setAudioSource(shuffle(dMin));
+    setCurrentNote(0);
+    break;
+
+    case "D# minor": 
+    setAudioSource(shuffle(dSharpMin));
+    setCurrentNote(0);
+    break;
+
+    case "E minor": 
+    setAudioSource(shuffle(eMin));
+    setCurrentNote(0);
+    break;
+
+    case "F minor": 
+    setAudioSource(shuffle(fMin));
+    setCurrentNote(0);
+    break;
+
+    case "F# minor": 
+    setAudioSource(shuffle(fSharpMin));
+    setCurrentNote(0);
+    break;
+
+    case "G minor": 
+    setAudioSource(shuffle(gMin));
+    setCurrentNote(0);
+    break;
+
+    case "G# minor": 
+    setAudioSource(shuffle(gSharpMin));
+    setCurrentNote(0);
+    break;
+
+    case "A minor": 
+    setAudioSource(shuffle(aMin));
+    setCurrentNote(0);
+    break;
+
+    case "A# minor": 
+    setAudioSource(shuffle(aSharpMin));
+    setCurrentNote(0);
+    break;
+
+    case "B minor": 
+    setAudioSource(shuffle(bMin));
+    setCurrentNote(0);
+    break;
+
+
+
     default: 
     break;
 
@@ -143,7 +250,7 @@ useEffect(()=> {
 
 
 
-console.log( currentNote + " " + audioSource[currentNote] )
+// console.log( currentNote + " " + audioSource[currentNote] )
 
   return (
     <div>
