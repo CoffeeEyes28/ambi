@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react'
 
 import C3 from '../Assets/Audio/C3.wav';
-import CSharp3 from '../Assets/Audio/C#3.wav';
+import CSharp3 from '../Assets/Audio/CSharp3.wav';
 import D3 from '../Assets/Audio/D3.wav';
-import DSharp3 from '../Assets/Audio/D#3.wav';
+import DSharp3 from '../Assets/Audio/DSharp3.wav';
 import E3 from '../Assets/Audio/E3.wav';
 import F3 from '../Assets/Audio/F3.wav';
-import FSharp3 from '../Assets/Audio/F#3.wav';
+import FSharp3 from '../Assets/Audio/FSharp3.wav';
 import G3 from '../Assets/Audio/G3.wav';
-import GSharp3 from '../Assets/Audio/G#3.wav';
+import GSharp3 from '../Assets/Audio/GSharp3.wav';
 import A3 from '../Assets/Audio/A3.wav';
-import ASharp3 from '../Assets/Audio/A#3.wav';
+import ASharp3 from '../Assets/Audio/ASharp3.wav';
 import B3 from '../Assets/Audio/B3.wav';
 
 import C4 from '../Assets/Audio/C4.wav';
-import CSharp4 from '../Assets/Audio/C#4.wav';
+import CSharp4 from '../Assets/Audio/CSharp4.wav';
 import D4 from '../Assets/Audio/D4.wav';
-import Dsharp4 from '../Assets/Audio/D#4.wav';
+import Dsharp4 from '../Assets/Audio/DSharp4.wav';
 import E4 from '../Assets/Audio/E4.wav';
 import F4 from '../Assets/Audio/F4.wav';
-import FSharp4 from '../Assets/Audio/F#4.wav';
+import FSharp4 from '../Assets/Audio/FSharp4.wav';
 import G4 from '../Assets/Audio/G4.wav';
-import GSharp4 from '../Assets/Audio/G#4.wav';
+import GSharp4 from '../Assets/Audio/GSharp4.wav';
 import A4 from '../Assets/Audio/A4.wav';
-import ASharp4 from '../Assets/Audio/A#4.wav';
+import ASharp4 from '../Assets/Audio/ASharp4.wav';
 import B4 from '../Assets/Audio/B4.wav';
 
 import C5 from '../Assets/Audio/C5.wav';
