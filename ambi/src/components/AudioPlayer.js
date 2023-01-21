@@ -116,24 +116,38 @@ const shuffle = (arr) => {
 
 
 useEffect(()=> {
+
   switch(choice.choice) {
+    
     case "C Major": 
     setAudioSource(shuffle(cMaj));
+    setCurrentNote(0);
     break;
+
     case "C# Major": 
     setAudioSource(shuffle(cSharpMaj));
+    setCurrentNote(0);
     break;
-    
-   }
+
+    case "D Major": 
+    setAudioSource(shuffle(dMaj));
+    setCurrentNote(0);
+    break;
+
+    default: 
+    break;
+
+   };
+
 },[choice]);
 
 
 
-console.log(currentNote)
+console.log( currentNote + " " + audioSource[currentNote] )
 
   return (
     <div>
-        <audio controls autoPlay src={audioSource[currentNote]} onEnded={() => setCurrentNote(i => i + 1)}></audio>
+        <audio controls autoPlay  src={audioSource[currentNote]}  onEnded={() => setCurrentNote(i => i + 1)}></audio>
         
         
         </div>

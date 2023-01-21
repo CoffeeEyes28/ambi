@@ -123,8 +123,9 @@ const Home = () => {
       </div>
           <div style={{visibility: view ? 'visible' : 'hidden'}}>
             <h2>Key: {choice}</h2>
-            <AudioPlayer choice={choice}/>
+            <AudioPlayer choice={choice} />
             <button onClick={handleView}>Go Back</button>
+            
           </div>
      
     </div>
