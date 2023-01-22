@@ -101,8 +101,9 @@ const Home = () => {
 
   return (
     <div>
-      <div style={{visibility: view ? 'hidden' : 'visible'}}>
       <h1>ambi</h1>
+      <div style={{visibility: view ? 'hidden' : 'visible'}}>
+      
       <p>
         ambi is your ambient generating friend. Select your desired key and scale, and then press the
         generate button. ambi will take it from there!

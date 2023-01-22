@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+// Notes
 import C3 from '../Assets/Audio/C3.wav';
 import CSharp3 from '../Assets/Audio/CSharp3.wav';
 import D3 from '../Assets/Audio/D3.wav';
@@ -27,6 +28,9 @@ import ASharp4 from '../Assets/Audio/ASharp4.wav';
 import B4 from '../Assets/Audio/B4.wav';
 
 import C5 from '../Assets/Audio/C5.wav';
+
+// Chords
+import cChord from '../Assets/Audio/Chords/CMaj.wav'
 
 // Major Scales
 const cMaj = [C3, D3, E3, F3, G3, A3, B3, C4 ]
@@ -79,15 +83,13 @@ const aSharpMin = [ASharp3, C4, CSharp4, Dsharp4, F4, FSharp4, GSharp4, ASharp4]
 const bMin = [B3, CSharp4, D4, E4, FSharp4, G4, A4, B4];
 
 
-
-
-
-
-
-
 const majorScales = [cMaj, cSharpMaj, dMaj, dSharpMaj, eMaj, fMaj, fSharpMaj, gMaj, gSharpMaj, aMaj, aSharpMaj, bMaj];
 
 const minorScales = [cMin, cSharpMin, dMin, dSharpMin, eMin, fMin, fSharpMin, gMin, gSharpMin, aMin, aSharpMin, bMin];
+
+// Major Chords
+
+const cMajChord = cChord;
 
 
 
@@ -97,6 +99,8 @@ const AudioPlayer = (choice) => {
 
 
 const [audioSource, setAudioSource] = useState([])
+
+const[chordSource, setChordSource] = useState("")
 
 const [currentNote, setCurrentNote] = useState(0)
 
@@ -121,6 +125,7 @@ useEffect(()=> {
     
     case "C Major": 
     setAudioSource(shuffle(cMaj));
+    setChordSource(cChord);
     setCurrentNote(0);
     break;
 
@@ -132,6 +137,7 @@ useEffect(()=> {
     case "D Major": 
     setAudioSource(shuffle(dMaj));
     setCurrentNote(0);
+
     break;
 
     case "D# Major": 
@@ -250,10 +256,14 @@ useEffect(()=> {
 
 
 
-// console.log( currentNote + " " + audioSource[currentNote] )
+
 
   return (
     <div>
+        <h2>Chord</h2>
+        <audio controls autoPlay src={chordSource} loop></audio>
+        <br></br>
+        <h3>Lead</h3>
         <audio controls autoPlay  src={audioSource[currentNote]}  onEnded={() => setCurrentNote(i => i + 1)}></audio>
         
         
